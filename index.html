@@ -370,6 +370,18 @@
 
   .copy-btn { margin-top: 1rem; }
 
+  /* ART GRID */
+  .art-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 0.5rem; }
+  .art-card { border: 1px solid var(--paper3); border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; transition: all 0.18s ease; background: var(--paper); }
+  .art-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(196,82,42,0.1); }
+  .art-card.selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent), 0 4px 12px rgba(196,82,42,0.15); }
+  .art-preview { width: 100%; height: 110px; overflow: hidden; background: #f5f0e8; display: flex; align-items: center; justify-content: center; }
+  .art-preview svg { width: 100%; height: 100%; display: block; }
+  .art-info { padding: 8px 10px 10px; }
+  .art-label { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
+  .art-ref { font-size: 11px; color: var(--ink3); line-height: 1.4; }
+  .art-ref em { font-style: italic; }
+
   /* TOAST */
   .toast {
     position: fixed;
@@ -461,20 +473,261 @@
     <!-- STEP 3 -->
     <div class="step" id="s3">
       <div class="step-tag">Arte</div>
-      <div class="question">¿Qué estilo de arte te atrae más?</div>
-      <div class="subq">Puedes elegir varias opciones.</div>
-      <div class="multi-hint">Selecciona todas las que apliquen</div>
-      <div class="chips" id="art-chips">
-        <div class="chip" onclick="toggleChip(this,'art','Realista detallado')">Realista y detallado</div>
-        <div class="chip" onclick="toggleChip(this,'art','Estilizado geométrico')">Estilizado / geométrico</div>
-        <div class="chip" onclick="toggleChip(this,'art','Línea clara')">Línea clara (estilo Hergé)</div>
-        <div class="chip" onclick="toggleChip(this,'art','Expresionista')">Expresionista / emocional</div>
-        <div class="chip" onclick="toggleChip(this,'art','Minimalista')">Minimalista</div>
-        <div class="chip" onclick="toggleChip(this,'art','Manga')">Influencia manga</div>
-        <div class="chip" onclick="toggleChip(this,'art','Acuarela pintado')">Acuarela / pintado</div>
-        <div class="chip" onclick="toggleChip(this,'art','Cómic clásico americano')">Cómic clásico americano</div>
-        <div class="chip" onclick="toggleChip(this,'art','Me da igual el estilo')">Me da igual el estilo</div>
+      <div class="question">¿Qué estilo visual te atrae más?</div>
+      <div class="subq">Las imágenes son ilustraciones de ejemplo creadas para esta encuesta, no obras reales. Cada una representa una forma de dibujar. Puedes elegir varias.</div>
+
+      <div class="art-grid" id="art-grid">
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Realista detallado')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#f5f0e8"/>
+              <!-- bg sky -->
+              <rect x="0" y="0" width="200" height="70" fill="#c8d8e8"/>
+              <rect x="0" y="55" width="200" height="75" fill="#8b7355"/>
+              <!-- detailed building -->
+              <rect x="30" y="20" width="55" height="90" fill="#d4c4a0" stroke="#8b7355" stroke-width="0.8"/>
+              <rect x="38" y="28" width="10" height="14" fill="#a0b8c8" stroke="#6a7a8a" stroke-width="0.5"/>
+              <rect x="55" y="28" width="10" height="14" fill="#a0b8c8" stroke="#6a7a8a" stroke-width="0.5"/>
+              <rect x="38" y="50" width="10" height="14" fill="#a0b8c8" stroke="#6a7a8a" stroke-width="0.5"/>
+              <rect x="55" y="50" width="10" height="14" fill="#a0b8c8" stroke="#6a7a8a" stroke-width="0.5"/>
+              <rect x="44" y="74" width="12" height="36" fill="#7a6a50" stroke="#5a4a38" stroke-width="0.5"/>
+              <!-- shading lines -->
+              <line x1="30" y1="20" x2="30" y2="110" stroke="#8b7355" stroke-width="0.4" opacity="0.5"/>
+              <line x1="33" y1="20" x2="33" y2="110" stroke="#8b7355" stroke-width="0.3" opacity="0.3"/>
+              <!-- figure -->
+              <circle cx="140" cy="38" r="9" fill="#d4a882" stroke="#9a7055" stroke-width="0.8"/>
+              <path d="M131 55 Q140 48 149 55 L152 95 H128 Z" fill="#6a5a8a" stroke="#4a3a6a" stroke-width="0.8"/>
+              <line x1="131" y1="62" x2="120" y2="80" stroke="#4a3a6a" stroke-width="1.2"/>
+              <line x1="149" y1="62" x2="160" y2="78" stroke="#4a3a6a" stroke-width="1.2"/>
+              <!-- ground detail -->
+              <line x1="0" y1="96" x2="200" y2="96" stroke="#6a5a40" stroke-width="0.5" opacity="0.4"/>
+              <line x1="0" y1="100" x2="200" y2="100" stroke="#6a5a40" stroke-width="0.3" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Realista y detallado</div>
+            <div class="art-ref">Al estilo de J.H. Williams III o Olivier Coipel</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Línea clara')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#f0f8ff"/>
+              <!-- clean sky -->
+              <rect x="0" y="0" width="200" height="65" fill="#d4eaf8"/>
+              <rect x="0" y="65" width="200" height="65" fill="#7cb87c"/>
+              <!-- clear line house -->
+              <rect x="20" y="25" width="70" height="80" fill="#fff8e8" stroke="#1a1a1a" stroke-width="1.5"/>
+              <polygon points="20,25 55,5 90,25" fill="#e85a3a" stroke="#1a1a1a" stroke-width="1.5"/>
+              <rect x="35" y="35" width="16" height="16" fill="#a0d4f0" stroke="#1a1a1a" stroke-width="1.5"/>
+              <rect x="59" y="35" width="16" height="16" fill="#a0d4f0" stroke="#1a1a1a" stroke-width="1.5"/>
+              <rect x="42" y="65" width="16" height="40" fill="#c8a878" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- figure clear lines -->
+              <circle cx="145" cy="42" r="10" fill="#ffe0c0" stroke="#1a1a1a" stroke-width="1.5"/>
+              <path d="M135 60 Q145 53 155 60 L158 100 H132 Z" fill="#3a7abf" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="135" y1="67" x2="122" y2="86" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="155" y1="67" x2="168" y2="84" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- sun -->
+              <circle cx="170" cy="18" r="10" fill="#f5d84a" stroke="#1a1a1a" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Línea clara</div>
+            <div class="art-ref">Al estilo de Hergé (<em>Tintín</em>) o Joann Sfar</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Estilizado geométrico')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#1a1a2e"/>
+              <!-- geometric abstract -->
+              <polygon points="100,10 140,70 60,70" fill="#c4522a" opacity="0.9"/>
+              <polygon points="30,40 70,100 10,110" fill="#7a4abf" opacity="0.8"/>
+              <polygon points="130,30 190,50 160,100 110,90" fill="#2a8a9a" opacity="0.8"/>
+              <rect x="50" y="50" width="40" height="40" fill="none" stroke="#f5d84a" stroke-width="1.5" transform="rotate(20,70,70)"/>
+              <circle cx="155" cy="65" r="22" fill="none" stroke="#e85a3a" stroke-width="1.5"/>
+              <line x1="0" y1="65" x2="200" y2="65" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+              <line x1="100" y1="0" x2="100" y2="130" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+              <!-- figure geometric -->
+              <rect x="88" y="72" width="24" height="30" fill="#f0e8d8" opacity="0.9"/>
+              <circle cx="100" cy="62" r="10" fill="#f0e8d8" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Estilizado / geométrico</div>
+            <div class="art-ref">Al estilo de Moebius o Raúl Allén (<em>Dune GN</em>)</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Expresionista')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#1c1008"/>
+              <!-- expressive brushwork -->
+              <ellipse cx="80" cy="65" rx="65" ry="55" fill="#3a1a08" stroke="#c87820" stroke-width="2" stroke-dasharray="4,2"/>
+              <path d="M40 30 Q90 10 150 40 Q180 60 160 100 Q120 130 60 110 Q20 90 40 30Z" fill="#5a2a10" opacity="0.7"/>
+              <!-- expressive face -->
+              <ellipse cx="95" cy="55" rx="28" ry="34" fill="#c89060"/>
+              <path d="M78 45 Q90 35 108 48" stroke="#2a1008" stroke-width="2.5" fill="none"/>
+              <ellipse cx="83" cy="52" rx="5" ry="7" fill="#1a0808"/>
+              <ellipse cx="108" cy="50" rx="5" ry="7" fill="#1a0808"/>
+              <path d="M80 72 Q95 85 112 72" stroke="#8a2a10" stroke-width="2.5" fill="none"/>
+              <!-- expressive strokes -->
+              <line x1="10" y1="20" x2="45" y2="50" stroke="#c87820" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+              <line x1="155" y1="15" x2="170" y2="60" stroke="#c87820" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+              <path d="M20 90 Q50 110 30 125" stroke="#e84820" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Expresionista / emocional</div>
+            <div class="art-ref">Al estilo de Dave McKean o Bill Sienkiewicz</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Acuarela pintado')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#faf5ee"/>
+              <!-- watercolor washes -->
+              <ellipse cx="60" cy="50" rx="55" ry="45" fill="#a8c8e8" opacity="0.4"/>
+              <ellipse cx="100" cy="70" rx="80" ry="50" fill="#d4b8a0" opacity="0.3"/>
+              <ellipse cx="150" cy="45" rx="45" ry="40" fill="#b8d4a0" opacity="0.35"/>
+              <!-- tree watercolor -->
+              <ellipse cx="50" cy="45" rx="30" ry="35" fill="#6a9a5a" opacity="0.5"/>
+              <ellipse cx="45" cy="38" rx="22" ry="25" fill="#4a8a3a" opacity="0.4"/>
+              <rect x="46" y="70" width="8" height="40" fill="#8a6a3a" opacity="0.6"/>
+              <!-- figure soft -->
+              <ellipse cx="135" cy="48" rx="14" ry="18" fill="#e8a878" opacity="0.7"/>
+              <ellipse cx="135" cy="35" rx="10" ry="12" fill="#d4987a" opacity="0.8"/>
+              <!-- soft ink lines over wash -->
+              <path d="M135 53 Q122 70 118 100" stroke="#6a4a2a" stroke-width="1" fill="none" opacity="0.5"/>
+              <path d="M135 53 Q148 70 152 98" stroke="#6a4a2a" stroke-width="1" fill="none" opacity="0.5"/>
+              <!-- blooms -->
+              <circle cx="170" cy="80" r="18" fill="#e8a0c0" opacity="0.3"/>
+              <circle cx="185" cy="70" r="12" fill="#f0b8d0" opacity="0.25"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Acuarela / pintado</div>
+            <div class="art-ref">Al estilo de Étienne Davodeau o Shaun Tan</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Minimalista')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#f8f6f2"/>
+              <!-- minimal horizon -->
+              <line x1="0" y1="80" x2="200" y2="80" stroke="#1a1a1a" stroke-width="1"/>
+              <!-- minimal figures -->
+              <circle cx="70" cy="55" r="8" fill="#1a1a1a"/>
+              <line x1="70" y1="63" x2="70" y2="80" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="70" y1="68" x2="60" y2="75" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="70" y1="68" x2="80" y2="75" stroke="#1a1a1a" stroke-width="1.5"/>
+              <circle cx="130" cy="55" r="8" fill="#1a1a1a"/>
+              <line x1="130" y1="63" x2="130" y2="80" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="130" y1="68" x2="120" y2="76" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="130" y1="68" x2="140" y2="73" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- single accent -->
+              <circle cx="100" cy="30" r="4" fill="#c4522a"/>
+              <!-- minimal speech -->
+              <rect x="82" y="36" width="36" height="14" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+              <line x1="95" y1="50" x2="92" y2="55" stroke="#1a1a1a" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Minimalista</div>
+            <div class="art-ref">Al estilo de Inio Asano o Adrian Tomine</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Manga')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#ffffff"/>
+              <!-- speed lines -->
+              <line x1="100" y1="65" x2="0" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="40" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="80" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="120" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="160" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="200" y2="0" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="0" y2="130" stroke="#ddd" stroke-width="0.8"/>
+              <line x1="100" y1="65" x2="200" y2="130" stroke="#ddd" stroke-width="0.8"/>
+              <!-- manga face -->
+              <ellipse cx="100" cy="58" rx="36" ry="42" fill="#fff5e8" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- large eyes -->
+              <ellipse cx="83" cy="52" rx="11" ry="14" fill="#1a1a1a"/>
+              <ellipse cx="117" cy="52" rx="11" ry="14" fill="#1a1a1a"/>
+              <ellipse cx="80" cy="49" rx="4" ry="5" fill="#ffffff"/>
+              <ellipse cx="114" cy="49" rx="4" ry="5" fill="#ffffff"/>
+              <!-- nose minimal -->
+              <path d="M97 65 Q100 70 103 65" stroke="#c8a878" stroke-width="1" fill="none"/>
+              <!-- mouth -->
+              <path d="M85 78 Q100 88 115 78" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+              <!-- hair -->
+              <path d="M64 40 Q70 10 100 8 Q130 10 136 40" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="1"/>
+              <path d="M64 40 Q55 35 60 55" fill="#1a1a1a"/>
+              <path d="M136 40 Q145 35 140 55" fill="#1a1a1a"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Influencia manga</div>
+            <div class="art-ref">Al estilo de Naoki Urasawa o Junji Ito</div>
+          </div>
+        </div>
+
+        <div class="art-card" onclick="toggleArtCard(this,'art','Cómic clásico americano')">
+          <div class="art-preview">
+            <svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="130" fill="#ffeedd"/>
+              <!-- halftone dots bg -->
+              <circle cx="15" cy="15" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <circle cx="30" cy="15" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <circle cx="45" cy="15" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <circle cx="22" cy="25" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <circle cx="37" cy="25" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <circle cx="52" cy="25" r="2.5" fill="#f0c090" opacity="0.6"/>
+              <!-- hero figure bold -->
+              <rect x="70" y="15" width="60" height="100" rx="4" fill="#e85a3a" stroke="#1a1a1a" stroke-width="2"/>
+              <circle cx="100" cy="30" r="16" fill="#f5c8a0" stroke="#1a1a1a" stroke-width="2"/>
+              <!-- cape -->
+              <path d="M70 40 Q50 70 55 110 L70 115Z" fill="#2a4abf" stroke="#1a1a1a" stroke-width="1.5"/>
+              <path d="M130 40 Q150 70 145 110 L130 115Z" fill="#2a4abf" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- bold lines on costume -->
+              <line x1="100" y1="45" x2="100" y2="115" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="75" y1="70" x2="125" y2="70" stroke="#1a1a1a" stroke-width="1.5"/>
+              <!-- star -->
+              <polygon points="100,52 103,61 112,61 105,67 108,76 100,70 92,76 95,67 88,61 97,61" fill="#f5d84a" stroke="#1a1a1a" stroke-width="1"/>
+              <!-- speech bubble -->
+              <ellipse cx="155" cy="28" rx="35" ry="18" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
+              <path d="M130 35 L120 45 L140 38Z" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="135" y1="22" x2="170" y2="22" stroke="#1a1a1a" stroke-width="1.5"/>
+              <line x1="132" y1="30" x2="172" y2="30" stroke="#1a1a1a" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="art-info">
+            <div class="art-label">Cómic clásico americano</div>
+            <div class="art-ref">Al estilo de Jack Kirby o Neal Adams</div>
+          </div>
+        </div>
+
       </div>
+
+      <hr class="divider">
+
+      <div class="question" style="font-size:1.1rem;margin-bottom:0.4rem;">Una pregunta más sobre el arte</div>
+      <div class="subq">En los últimos años, algunas adaptaciones famosas han apostado por un arte muy estilizado y geométrico (paletas de color limitadas, formas abstractas, menos "realismo"). ¿Cuál es tu postura?</div>
+      <div class="options" id="dune-opts">
+        <div class="opt" onclick="pick(this,'arte_arriesgado','Me encanta — el arte experimental es lo que hace especial al medio')"><span class="opt-icon">🔥</span><div><div class="opt-label">Me encanta — es lo que hace especial al medio</div><div class="opt-sub">El arte experimental y arriesgado me atrae</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','Me gusta si encaja con la historia')"><span class="opt-icon">🎯</span><div><div class="opt-label">Me gusta si encaja con la historia</div><div class="opt-sub">El estilo debe servir a la narrativa</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','Prefiero arte más clásico y legible')"><span class="opt-icon">📖</span><div><div class="opt-label">Prefiero algo más clásico y fácil de leer</div><div class="opt-sub">La claridad narrativa es prioritaria</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','Me resulta difícil pero lo valoro')"><span class="opt-icon">🤔</span><div><div class="opt-label">Me resulta difícil a veces, pero lo valoro</div><div class="opt-sub">Lo entiendo como apuesta artística aunque no siempre me engancha</div></div></div>
+      </div>
+
       <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n3" disabled>Siguiente →</button></div>
     </div>
 
@@ -653,6 +906,22 @@
     answers[key] = [val];
     const nBtn = document.getElementById('n' + current);
     if (nBtn) nBtn.disabled = false;
+    if (key === 'arte_arriesgado') checkStep3();
+  }
+
+  function toggleArtCard(el, key, val) {
+    el.classList.toggle('selected');
+    if (!answers[key]) answers[key] = [];
+    if (el.classList.contains('selected')) answers[key].push(val);
+    else answers[key] = answers[key].filter(v => v !== val);
+    checkStep3();
+  }
+
+  function checkStep3() {
+    const hasArt = answers['art'] && answers['art'].length > 0;
+    const hasOpinion = answers['arte_arriesgado'] && answers['arte_arriesgado'].length > 0;
+    const nBtn = document.getElementById('n3');
+    if (nBtn) nBtn.disabled = !(hasArt && hasOpinion);
   }
 
   function toggleChip(el, key, val) {
@@ -684,11 +953,32 @@
   function next() { if (current < total) showStep(current + 1); }
   function back() { if (current > 1) showStep(current - 1); }
 
-  function submitSurvey() {
+  async function submitSurvey() {
     const email = document.getElementById('email-input').value.trim();
     if (email) answers['email'] = email;
     const comment = document.getElementById('open-text').value.trim();
     if (comment) answers['comentario'] = comment;
+
+    const submitBtns = document.querySelectorAll('#s9 .btn');
+    submitBtns.forEach(b => { b.disabled = true; b.textContent = 'Enviando...'; });
+
+    const formData = new FormData();
+    for (const [k, v] of Object.entries(answers)) {
+      if (!v || (Array.isArray(v) && v.length === 0)) continue;
+      formData.append(labels[k] || k, Array.isArray(v) ? v.join(', ') : v);
+    }
+
+    try {
+      const res = await fetch('https://formspree.io/f/xjgjgvdw', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('Error de red');
+    } catch (e) {
+      showToast('Error al enviar — tus respuestas se han guardado localmente');
+    }
+
     document.getElementById('prog').style.width = '100%';
     document.getElementById('prog-label').textContent = '¡Completada!';
     document.getElementById('prog-pct').textContent = '100%';
@@ -700,6 +990,7 @@
 
   const labels = {
     freq:'Frecuencia de lectura', ext:'Extensión preferida', art:'Estilo de arte',
+    arte_arriesgado:'Arte experimental vs. clásico',
     gen:'Géneros', precio_papel:'Precio papel', precio_digital:'Precio digital',
     fmt:'Formato', size:'Tamaño', disc:'Cómo descubre', buy:'Dónde compra',
     val:'Lo que más valora', comentario:'Comentario', email:'Correo'
