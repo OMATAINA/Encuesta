@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Encuesta — Novela Gráfica</title>
+<title>Survey — Graphic Novel</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;1,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -422,19 +422,19 @@
 <div class="container">
 
   <header class="header">
-    <div class="header-eyebrow">Encuesta de lectores</div>
-    <h1>Cuéntanos qué te <em>apasiona</em> leer</h1>
-    <p>Queremos publicar lo que la gente de verdad quiere leer. Tus respuestas dan forma a nuestra línea editorial.</p>
+    <div class="header-eyebrow">Reader survey</div>
+    <h1>Tell us what you <em>love</em> to read</h1>
+    <p>We want to publish what people truly want to read. Your answers shape our editorial line.</p>
     <div class="header-meta">
-      <span>5 minutos</span>
-      <span>9 preguntas</span>
-      <span>100% anónimo</span>
+      <span>5 minutes</span>
+      <span>9 questions</span>
+      <span>100% anonymous</span>
     </div>
   </header>
 
   <div class="progress-wrap">
     <div class="progress-info">
-      <span id="prog-label">Pregunta 1 de 9</span>
+      <span id="prog-label">Question 1 of 9</span>
       <span id="prog-pct">11%</span>
     </div>
     <div class="progress-track"><div class="progress-fill" id="prog" style="width:11%"></div></div>
@@ -444,191 +444,191 @@
 
     <!-- STEP 1 -->
     <div class="step active" id="s1">
-      <div class="step-tag">Sobre ti</div>
-      <div class="question">¿Con qué frecuencia lees novela gráfica?</div>
-      <div class="subq">Para entender mejor tu relación con el medio.</div>
+      <div class="step-tag">About you</div>
+      <div class="question">How often do you read graphic novels?</div>
+      <div class="subq">To better understand your relationship with the medium.</div>
       <div class="options">
-        <div class="opt" onclick="pick(this,'freq','Varias veces al mes')"><div><div class="opt-label">Varias veces al mes</div><div class="opt-sub">Es parte de mi rutina de lectura</div></div></div>
-        <div class="opt" onclick="pick(this,'freq','Una vez al mes')"><div><div class="opt-label">Aproximadamente una vez al mes</div></div></div>
-        <div class="opt" onclick="pick(this,'freq','Cada pocos meses')"><div><div class="opt-label">Cada pocos meses</div><div class="opt-sub">Cuando algo me llama la atención</div></div></div>
-        <div class="opt" onclick="pick(this,'freq','Raramente o soy nuevo')"><div><div class="opt-label">Raramente o soy nuevo/a en esto</div></div></div>
+        <div class="opt" onclick="pick(this,'freq','Several times a month')"><div><div class="opt-label">Several times a month</div><div class="opt-sub">It is part of my reading routine</div></div></div>
+        <div class="opt" onclick="pick(this,'freq','About once a month')"><div><div class="opt-label">About once a month</div></div></div>
+        <div class="opt" onclick="pick(this,'freq','Every few months')"><div><div class="opt-label">Every few months</div><div class="opt-sub">When something catches my eye</div></div></div>
+        <div class="opt" onclick="pick(this,'freq','Rarely or new to this')"><div><div class="opt-label">Rarely or new to this</div></div></div>
       </div>
-      <div class="nav"><span></span><button class="btn btn-primary" onclick="next()" id="n1" disabled>Siguiente →</button></div>
+      <div class="nav"><span></span><button class="btn btn-primary" onclick="next()" id="n1" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 2 -->
     <div class="step" id="s2">
-      <div class="step-tag">Extensión</div>
-      <div class="question">¿Qué extensión prefieres para una novela gráfica?</div>
-      <div class="subq">Piensa en cuándo y cómo sueles leer.</div>
+      <div class="step-tag">Length</div>
+      <div class="question">What length do you prefer for a graphic novel?</div>
+      <div class="subq">Think about when and how you usually read.</div>
       <div class="options">
-        <div class="opt" onclick="pick(this,'ext','Corta — una tarde')"><div><div class="opt-label">Corta — cabe en una tarde</div><div class="opt-sub">~80–120 páginas, 1–2 horas</div></div></div>
-        <div class="opt" onclick="pick(this,'ext','Media — dos sesiones')"><div><div class="opt-label">Media — un par de sesiones</div><div class="opt-sub">~150–250 páginas, 2–4 horas</div></div></div>
-        <div class="opt" onclick="pick(this,'ext','Larga — para sumergirse')"><div><div class="opt-label">Larga — para sumergirse de verdad</div><div class="opt-sub">250+ páginas, varias sesiones</div></div></div>
-        <div class="opt" onclick="pick(this,'ext','Series en tomos')"><div><div class="opt-label">Prefiero series en tomos</div><div class="opt-sub">La historia que crece entrega a entrega</div></div></div>
+        <div class="opt" onclick="pick(this,'ext','Short — fits in an afternoon')"><div><div class="opt-label">Short — fits in an afternoon</div><div class="opt-sub">~80–120 pages, 1–2 hours</div></div></div>
+        <div class="opt" onclick="pick(this,'ext','Medium — a couple of sessions')"><div><div class="opt-label">Medium — a couple of sessions</div><div class="opt-sub">~150–250 pages, 2–4 hours</div></div></div>
+        <div class="opt" onclick="pick(this,'ext','Long — to really dive in')"><div><div class="opt-label">Long — to really dive in</div><div class="opt-sub">250+ pages, multiple sessions</div></div></div>
+        <div class="opt" onclick="pick(this,'ext','Series in volumes')"><div><div class="opt-label">I prefer series in volumes</div><div class="opt-sub">A story that grows installment by installment</div></div></div>
       </div>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n2" disabled>Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()" id="n2" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 3 -->
     <div class="step" id="s3">
-      <div class="step-tag">Arte</div>
-      <div class="question">¿Qué estilo de arte te atrae más?</div>
-      <div class="subq">Puedes elegir varias opciones.</div>
-      <div class="multi-hint">Selecciona todas las que apliquen</div>
+      <div class="step-tag">Art style</div>
+      <div class="question">What art style appeals to you most?</div>
+      <div class="subq">You can choose several options.</div>
+      <div class="multi-hint">Select all that apply</div>
       <div class="chips" id="art-chips">
-        <div class="chip" onclick="toggleChip(this,'art','Realista detallado')">Realista y detallado</div>
-        <div class="chip" onclick="toggleChip(this,'art','Estilizado geométrico')">Estilizado / geométrico</div>
-        <div class="chip" onclick="toggleChip(this,'art','Línea clara')">Línea clara (estilo Hergé)</div>
-        <div class="chip" onclick="toggleChip(this,'art','Expresionista')">Expresionista / emocional</div>
-        <div class="chip" onclick="toggleChip(this,'art','Minimalista')">Minimalista</div>
-        <div class="chip" onclick="toggleChip(this,'art','Manga')">Influencia manga</div>
-        <div class="chip" onclick="toggleChip(this,'art','Acuarela pintado')">Acuarela / pintado</div>
-        <div class="chip" onclick="toggleChip(this,'art','Cómic clásico americano')">Cómic clásico americano</div>
-        <div class="chip" onclick="toggleChip(this,'art','Me da igual el estilo')">Me da igual el estilo</div>
+        <div class="chip" onclick="toggleChip(this,'art','Realistic and detailed')">Realistic and detailed</div>
+        <div class="chip" onclick="toggleChip(this,'art','Stylised / geometric')">Stylised / geometric</div>
+        <div class="chip" onclick="toggleChip(this,'art','Clear line')">Clear line (Hergé style)</div>
+        <div class="chip" onclick="toggleChip(this,'art','Expressionist')">Expressionist / emotional</div>
+        <div class="chip" onclick="toggleChip(this,'art','Minimalist')">Minimalist</div>
+        <div class="chip" onclick="toggleChip(this,'art','Manga influence')">Manga influence</div>
+        <div class="chip" onclick="toggleChip(this,'art','Watercolour / painted')">Watercolour / painted</div>
+        <div class="chip" onclick="toggleChip(this,'art','Classic American comics')">Classic American comics</div>
+        <div class="chip" onclick="toggleChip(this,'art','Does not matter')">Style does not matter to me</div>
       </div>
 
       <hr class="divider">
 
-      <div class="question" style="font-size:1.1rem;margin-bottom:0.4rem;">Una pregunta más sobre el arte</div>
-      <div class="subq">En los últimos años, algunas adaptaciones famosas han apostado por un arte muy estilizado y geométrico (paletas de color limitadas, formas abstractas, menos "realismo"). ¿Cuál es tu postura?</div>
+      <div class="question" style="font-size:1.1rem;margin-bottom:0.4rem;">One more question about art</div>
+      <div class="subq">In recent years, some high-profile adaptations have gone for a very stylised, geometric look (limited colour palettes, abstract shapes, less "realism"). Where do you stand?</div>
       <div class="options" id="dune-opts">
-        <div class="opt" onclick="pick(this,'arte_arriesgado','Me encanta — el arte experimental es lo que hace especial al medio')"><div><div class="opt-label">Me encanta — es lo que hace especial al medio</div><div class="opt-sub">El arte experimental y arriesgado me atrae</div></div></div>
-        <div class="opt" onclick="pick(this,'arte_arriesgado','Me gusta si encaja con la historia')"><div><div class="opt-label">Me gusta si encaja con la historia</div><div class="opt-sub">El estilo debe servir a la narrativa</div></div></div>
-        <div class="opt" onclick="pick(this,'arte_arriesgado','Prefiero arte más clásico y legible')"><div><div class="opt-label">Prefiero algo más clásico y fácil de leer</div><div class="opt-sub">La claridad narrativa es prioritaria</div></div></div>
-        <div class="opt" onclick="pick(this,'arte_arriesgado','Me resulta difícil pero lo valoro')"><div><div class="opt-label">Me resulta difícil a veces, pero lo valoro</div><div class="opt-sub">Lo entiendo como apuesta artística aunque no siempre me engancha</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','I love it — experimental art is what makes the medium special')"><div><div class="opt-label">I love it — it is what makes the medium special</div><div class="opt-sub">Bold, experimental art draws me in</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','I like it when it fits the story')"><div><div class="opt-label">I like it when it fits the story</div><div class="opt-sub">Style should serve the narrative</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','I prefer something more classic and readable')"><div><div class="opt-label">I prefer something more classic and easy to read</div><div class="opt-sub">Narrative clarity comes first</div></div></div>
+        <div class="opt" onclick="pick(this,'arte_arriesgado','I sometimes find it hard but I appreciate it')"><div><div class="opt-label">I sometimes find it hard, but I appreciate it</div><div class="opt-sub">I see it as an artistic statement even if it does not always hook me</div></div></div>
       </div>
 
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n3" disabled>Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()" id="n3" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 4 -->
     <div class="step" id="s4">
-      <div class="step-tag">Géneros</div>
-      <div class="question">¿Qué géneros o temáticas te enganchan?</div>
-      <div class="multi-hint">Selecciona todas las que apliquen</div>
+      <div class="step-tag">Genres</div>
+      <div class="question">What genres or themes hook you?</div>
+      <div class="multi-hint">Select all that apply</div>
       <div class="chips" id="gen-chips">
-        <div class="chip" onclick="toggleChip(this,'gen','Thriller / misterio')">Thriller / misterio</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Ciencia ficción')">Ciencia ficción</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Terror')">Terror</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Drama íntimo')">Drama íntimo / slice of life</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Fantasía')">Fantasía</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Histórico')">Histórico</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Humor')">Humor / comedia</div>
-        <div class="chip" onclick="toggleChip(this,'gen','No ficción periodismo')">No ficción / periodismo</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Autobiográfico')">Autobiográfico</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Superhéroes')">Superhéroes</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Thriller / mystery')">Thriller / mystery</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Science fiction')">Science fiction</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Horror')">Horror</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Intimate drama')">Intimate drama / slice of life</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Fantasy')">Fantasy</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Historical')">Historical</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Humour')">Humour / comedy</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Non-fiction journalism')">Non-fiction / journalism</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Autobiographical')">Autobiographical</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Superheroes')">Superheroes</div>
         <div class="chip" onclick="toggleChip(this,'gen','LGBTQ+')">LGBTQ+</div>
-        <div class="chip" onclick="toggleChip(this,'gen','Infantil juvenil')">Infantil / juvenil</div>
+        <div class="chip" onclick="toggleChip(this,'gen','Children / YA')">Children / YA</div>
       </div>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n4" disabled>Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()" id="n4" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 5 -->
     <div class="step" id="s5">
-      <div class="step-tag">Precio</div>
-      <div class="question">¿Cuánto pagarías por una novela gráfica de calidad?</div>
-      <div class="subq">Desliza hasta encontrar tu precio justo.</div>
+      <div class="step-tag">Price</div>
+      <div class="question">How much would you pay for a quality graphic novel?</div>
+      <div class="subq">Slide to find your ideal price.</div>
       <div class="slider-section">
-        <div style="font-size:13px;color:var(--ink3);margin-bottom:0.4rem;font-weight:500;">Formato papel</div>
-        <div class="slider-val" id="precio-val">20 €</div>
-        <input type="range" min="8" max="45" value="20" step="1" oninput="updateSlider(this,'precio-val',this.value+' €','precio_papel')">
-        <div class="slider-labels"><span>8 €</span><span>45 €</span></div>
+        <div style="font-size:13px;color:var(--ink3);margin-bottom:0.4rem;font-weight:500;">Print format</div>
+        <div class="slider-val" id="precio-val">$20</div>
+        <input type="range" min="8" max="45" value="20" step="1" oninput="updateSlider(this,'precio-val','$'+this.value,'precio_papel')">
+        <div class="slider-labels"><span>$8</span><span>$45</span></div>
       </div>
       <hr class="divider">
       <div class="slider-section">
-        <div style="font-size:13px;color:var(--ink3);margin-bottom:0.4rem;font-weight:500;">Formato digital</div>
-        <div class="slider-val" id="digital-val">10 €</div>
-        <input type="range" min="3" max="25" value="10" step="1" oninput="updateSlider(this,'digital-val',this.value+' €','precio_digital')">
-        <div class="slider-labels"><span>3 €</span><span>25 €</span></div>
+        <div style="font-size:13px;color:var(--ink3);margin-bottom:0.4rem;font-weight:500;">Digital format</div>
+        <div class="slider-val" id="digital-val">$10</div>
+        <input type="range" min="3" max="25" value="10" step="1" oninput="updateSlider(this,'digital-val','$'+this.value,'precio_digital')">
+        <div class="slider-labels"><span>$3</span><span>$25</span></div>
       </div>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()">Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()">Next →</button></div>
     </div>
 
     <!-- STEP 6 -->
     <div class="step" id="s6">
-      <div class="step-tag">Formato</div>
-      <div class="question">¿Cómo prefieres leer?</div>
-      <div class="multi-hint">Selecciona todas las que apliquen</div>
+      <div class="step-tag">Format</div>
+      <div class="question">How do you prefer to read?</div>
+      <div class="multi-hint">Select all that apply</div>
       <div class="chips" id="fmt-chips">
-        <div class="chip" onclick="toggleChip(this,'fmt','Papel tapa blanda')">Papel — tapa blanda</div>
-        <div class="chip" onclick="toggleChip(this,'fmt','Papel tapa dura')">Papel — tapa dura / edición especial</div>
-        <div class="chip" onclick="toggleChip(this,'fmt','Tablet e-reader')">Tablet o e-reader</div>
-        <div class="chip" onclick="toggleChip(this,'fmt','Móvil scroll')">Móvil (scroll / webtoon)</div>
-        <div class="chip" onclick="toggleChip(this,'fmt','Indiferente soporte')">Me da igual el soporte</div>
+        <div class="chip" onclick="toggleChip(this,'fmt','Paperback')">Paper — paperback</div>
+        <div class="chip" onclick="toggleChip(this,'fmt','Hardcover / special edition')">Paper — hardcover / special edition</div>
+        <div class="chip" onclick="toggleChip(this,'fmt','Tablet or e-reader')">Tablet or e-reader</div>
+        <div class="chip" onclick="toggleChip(this,'fmt','Mobile scroll')">Mobile (scroll / webtoon)</div>
+        <div class="chip" onclick="toggleChip(this,'fmt','Does not matter')">Does not matter to me</div>
       </div>
       <hr class="divider">
-      <div class="subq" style="margin-bottom:0.75rem;">¿Importa el tamaño físico del libro?</div>
+      <div class="subq" style="margin-bottom:0.75rem;">Does the physical size of the book matter?</div>
       <div class="options">
-        <div class="opt" onclick="pick(this,'size','Prefiero tamaño grande')"><div><div class="opt-label">Grande — disfruto el arte a todo tamaño</div></div></div>
-        <div class="opt" onclick="pick(this,'size','Prefiero bolsillo')"><div><div class="opt-label">Bolsillo — fácil de llevar</div></div></div>
-        <div class="opt" onclick="pick(this,'size','Indiferente tamaño')"><div><div class="opt-label">Me es indiferente</div></div></div>
+        <div class="opt" onclick="pick(this,'size','I prefer large format')"><div><div class="opt-label">Large — I enjoy the art at full size</div></div></div>
+        <div class="opt" onclick="pick(this,'size','I prefer pocket size')"><div><div class="opt-label">Pocket size — easy to carry</div></div></div>
+        <div class="opt" onclick="pick(this,'size','Indifferent')"><div><div class="opt-label">Does not matter to me</div></div></div>
       </div>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n6" disabled>Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()" id="n6" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 7 -->
     <div class="step" id="s7">
-      <div class="step-tag">Descubrimiento y compra</div>
-      <div class="question">¿Cómo descubres y dónde compras?</div>
-      <div class="multi-hint" style="margin-bottom:0.75rem;">Cómo sueles descubrir nuevas obras</div>
+      <div class="step-tag">Discovery &amp; purchase</div>
+      <div class="question">How do you discover and where do you buy?</div>
+      <div class="multi-hint" style="margin-bottom:0.75rem;">How you usually discover new titles</div>
       <div class="chips" id="disc-chips">
         <div class="chip" onclick="toggleChip(this,'disc','Instagram TikTok')">Instagram / TikTok</div>
-        <div class="chip" onclick="toggleChip(this,'disc','Recomendación amigos')">Recomendación de amigos</div>
-        <div class="chip" onclick="toggleChip(this,'disc','Reseñas blogs')">Reseñas en blogs o webs</div>
+        <div class="chip" onclick="toggleChip(this,'disc','Friend recommendation')">Friend recommendation</div>
+        <div class="chip" onclick="toggleChip(this,'disc','Reviews on blogs or websites')">Reviews on blogs or websites</div>
         <div class="chip" onclick="toggleChip(this,'disc','Goodreads')">Goodreads</div>
-        <div class="chip" onclick="toggleChip(this,'disc','Librería ojeando')">Ojeando en librería</div>
-        <div class="chip" onclick="toggleChip(this,'disc','Newsletter correo')">Newsletters o correos</div>
-        <div class="chip" onclick="toggleChip(this,'disc','Ferias convenciones')">Ferias y convenciones</div>
+        <div class="chip" onclick="toggleChip(this,'disc','Browsing in a bookshop')">Browsing in a bookshop</div>
+        <div class="chip" onclick="toggleChip(this,'disc','Newsletter or email')">Newsletters or emails</div>
+        <div class="chip" onclick="toggleChip(this,'disc','Fairs and conventions')">Fairs and conventions</div>
       </div>
       <hr class="divider">
-      <div class="subq" style="margin-bottom:0.75rem;">¿Dónde sueles comprar?</div>
+      <div class="subq" style="margin-bottom:0.75rem;">Where do you usually buy?</div>
       <div class="chips" id="buy-chips">
-        <div class="chip" onclick="toggleChip(this,'buy','Librería física')">Librería física</div>
+        <div class="chip" onclick="toggleChip(this,'buy','Physical bookshop')">Physical bookshop</div>
         <div class="chip" onclick="toggleChip(this,'buy','Amazon')">Amazon</div>
-        <div class="chip" onclick="toggleChip(this,'buy','Web editorial')">Web de la editorial</div>
-        <div class="chip" onclick="toggleChip(this,'buy','Tienda cómic')">Tienda especializada en cómic</div>
-        <div class="chip" onclick="toggleChip(this,'buy','ComiXology digital')">ComiXology u otras plataformas digitales</div>
-        <div class="chip" onclick="toggleChip(this,'buy','Biblioteca préstamo')">Biblioteca / préstamo</div>
+        <div class="chip" onclick="toggleChip(this,'buy','Publisher website')">Publisher website</div>
+        <div class="chip" onclick="toggleChip(this,'buy','Specialist comics shop')">Specialist comics shop</div>
+        <div class="chip" onclick="toggleChip(this,'buy','ComiXology or other digital platforms')">ComiXology or other digital platforms</div>
+        <div class="chip" onclick="toggleChip(this,'buy','Library or lending')">Library / lending</div>
       </div>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()" id="n7" disabled>Siguiente →</button></div>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()" id="n7" disabled>Next →</button></div>
     </div>
 
     <!-- STEP 8 -->
     <div class="step" id="s8">
-      <div class="step-tag">Valores y opinión</div>
-      <div class="question">Dos últimas preguntas rápidas</div>
-      <div class="subq">¿Qué valoras más en un lanzamiento? Elige hasta 3.</div>
+      <div class="step-tag">Values &amp; opinion</div>
+      <div class="question">Two last quick questions</div>
+      <div class="subq">What do you value most in a new release? Choose up to 3.</div>
       <div class="chips" id="val-chips">
-        <div class="chip" onclick="toggleChipMax(this,'val','Extras making-of',3)">Extras / making-of</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Edición especial numerada',3)">Edición especial / numerada</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Precio asequible',3)">Precio asequible</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Autor conocido',3)">Autor o autora conocidos</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Historia original',3)">Historia completamente original</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Diversidad de voces',3)">Diversidad de voces / autoras</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Impresión calidad',3)">Impresión y papel de calidad</div>
-        <div class="chip" onclick="toggleChipMax(this,'val','Adaptación obra conocida',3)">Adaptación de obra que ya conozco</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Extras / making-of',3)">Extras / making-of</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Special / numbered edition',3)">Special / numbered edition</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Affordable price',3)">Affordable price</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Known author or artist',3)">Known author or artist</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Completely original story',3)">Completely original story</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Diversity of voices',3)">Diversity of voices / creators</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Quality printing and paper',3)">Quality printing and paper</div>
+        <div class="chip" onclick="toggleChipMax(this,'val','Adaptation of a work I already know',3)">Adaptation of a work I already know</div>
       </div>
       <hr class="divider">
-      <div class="subq">¿Algo que eches en falta en la oferta actual de novela gráfica? (opcional)</div>
-      <textarea class="text-input" id="open-text" rows="3" placeholder="Escribe lo que quieras aquí..."></textarea>
-      <div class="nav"><button class="btn" onclick="back()">← Atrás</button><button class="btn btn-primary" onclick="next()">Siguiente →</button></div>
+      <div class="subq">Anything you feel is missing from the current graphic novel market? (optional)</div>
+      <textarea class="text-input" id="open-text" rows="3" placeholder="Write whatever you like here..."></textarea>
+      <div class="nav"><button class="btn" onclick="back()">← Back</button><button class="btn btn-primary" onclick="next()">Next →</button></div>
     </div>
 
     <!-- STEP 9 -->
     <div class="step" id="s9">
-      <div class="step-tag">¡Ya casi!</div>
-      <div class="question">¿Quieres estar al tanto de nuestros lanzamientos?</div>
-      <div class="subq">Déjanos tu correo y te avisaremos de novedades, pre-ventas y contenido exclusivo. Sin spam, baja cuando quieras.</div>
+      <div class="step-tag">Almost there!</div>
+      <div class="question">Want to stay up to date with our releases?</div>
+      <div class="subq">Leave your email and we will let you know about new releases, pre-orders and exclusive content. No spam, unsubscribe anytime.</div>
       <div class="email-row">
         <input type="email" class="text-input" id="email-input" placeholder="tu@correo.com">
       </div>
-      <div style="margin-top:0.6rem;font-size:12px;color:var(--ink3);">El correo es completamente opcional.</div>
+      <div style="margin-top:0.6rem;font-size:12px;color:var(--ink3);">Email is completely optional.</div>
       <div class="nav">
-        <button class="btn" onclick="back()">← Atrás</button>
+        <button class="btn" onclick="back()">← Back</button>
         <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;">
-          <button class="btn" onclick="submitSurvey()" style="font-size:13px;">Enviar sin correo</button>
-          <button class="btn btn-primary" onclick="submitSurvey()">Enviar encuesta →</button>
+          <button class="btn" onclick="submitSurvey()" style="font-size:13px;">Send without email</button>
+          <button class="btn btn-primary" onclick="submitSurvey()">Send survey →</button>
         </div>
       </div>
     </div>
@@ -637,16 +637,16 @@
     <div class="step" id="sthanks">
       <div class="thankyou">
         <span class="thanks-mark">✦</span>
-        <h2>¡Gracias por tu tiempo!</h2>
-        <p>Tus respuestas nos ayudan a publicar exactamente lo que la gente quiere leer.</p>
+        <h2>Thank you for your time!</h2>
+        <p>Your answers help us publish exactly what people want to read.</p>
         <div class="summary-box" id="summary-box"></div>
-        <button class="btn btn-primary copy-btn" onclick="copySummary()">Copiar mis respuestas</button>
+        <button class="btn btn-primary copy-btn" onclick="copySummary()">Copy my answers</button>
       </div>
     </div>
 
   </div><!-- /card -->
 
-  <p style="text-align:center;font-size:12px;color:var(--ink3);margin-top:1.5rem;">Encuesta creada por tu editorial · Datos usados únicamente para planificación editorial</p>
+  <p style="text-align:center;font-size:12px;color:var(--ink3);margin-top:1.5rem;">Survey created by our publishing house · Data used solely for editorial planning</p>
 
 </div><!-- /container -->
 
@@ -658,7 +658,7 @@
   function updateProgress() {
     const pct = Math.round((current / total) * 100);
     document.getElementById('prog').style.width = pct + '%';
-    document.getElementById('prog-label').textContent = 'Pregunta ' + current + ' de ' + total;
+    document.getElementById('prog-label').textContent = 'Question ' + current + ' of ' + total;
     document.getElementById('prog-pct').textContent = pct + '%';
   }
 
@@ -712,7 +712,7 @@
       el.classList.remove('selected');
       answers[key] = answers[key].filter(v => v !== val);
     } else {
-      if (answers[key].length >= max) { showToast('Elige máximo ' + max + ' opciones'); return; }
+      if (answers[key].length >= max) { showToast('Choose at most ' + max + ' options'); return; }
       el.classList.add('selected');
       answers[key].push(val);
     }
@@ -733,7 +733,7 @@
     if (comment) answers['comentario'] = comment;
 
     const submitBtns = document.querySelectorAll('#s9 .btn');
-    submitBtns.forEach(b => { b.disabled = true; b.textContent = 'Enviando...'; });
+    submitBtns.forEach(b => { b.disabled = true; b.textContent = 'Sending...'; });
 
     const formData = new FormData();
     for (const [k, v] of Object.entries(answers)) {
@@ -749,11 +749,11 @@
       });
       if (!res.ok) throw new Error('Error de red');
     } catch (e) {
-      showToast('Error al enviar — tus respuestas se han guardado localmente');
+      showToast('Send error — your answers have been saved locally');
     }
 
     document.getElementById('prog').style.width = '100%';
-    document.getElementById('prog-label').textContent = '¡Completada!';
+    document.getElementById('prog-label').textContent = 'Completed!';
     document.getElementById('prog-pct').textContent = '100%';
     document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
     document.getElementById('sthanks').classList.add('active');
@@ -762,11 +762,11 @@
   }
 
   const labels = {
-    freq:'Frecuencia de lectura', ext:'Extensión preferida', art:'Estilo de arte',
-    arte_arriesgado:'Arte experimental vs. clásico',
-    gen:'Géneros', precio_papel:'Precio papel', precio_digital:'Precio digital',
-    fmt:'Formato', size:'Tamaño', disc:'Cómo descubre', buy:'Dónde compra',
-    val:'Lo que más valora', comentario:'Comentario', email:'Correo'
+    freq:'Reading frequency', ext:'Preferred length', art:'Art style',
+    arte_arriesgado:'Experimental vs. classic art',
+    gen:'Genres', precio_papel:'Print price', precio_digital:'Digital price',
+    fmt:'Format', size:'Size', disc:'How they discover', buy:'Where they buy',
+    val:'What they value most', comentario:'Comment', email:'Email'
   };
 
   function buildSummary() {
@@ -785,7 +785,7 @@
       if (!v || (Array.isArray(v) && v.length === 0)) continue;
       text += `${labels[k] || k}: ${Array.isArray(v) ? v.join(', ') : v}\n`;
     }
-    navigator.clipboard.writeText(text).then(() => showToast('¡Copiado al portapapeles!'));
+    navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard!'));
   }
 
   function showToast(msg) {
